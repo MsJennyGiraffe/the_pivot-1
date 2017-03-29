@@ -54,3 +54,16 @@ The project also utilizes leverages a bootstrap theme called 'twitter bootstrap'
 ### Dependencies
 
 This application depends on many ruby gems, all of which are found in the `Gemfile` and can be installed by running `bundle install` from the terminal in the main directory of the project. The app also relies on Twitter, Stripe, and AWS API keys, which must be provided on a per-site-admin basis.
+
+
+##### Can no longer bundle install due to outdated Dependencies
+
+Project uses: Rails -v 4.2.6
+
+Project uses: Ruby -v 2.4.0
+
+https://github.com/rails/rails/issues/27450
+
+Drenmi commented on Dec 25, 2016
+
+The JSON gem only supports the Integer unification in Ruby 2.4 starting from 2.0.0, and the Rails dependency is set to ~> 1.8, so you won't be able to run Rails 4.2 with Ruby 2.4 for now.
